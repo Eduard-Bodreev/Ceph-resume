@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduard Bodreev - Systems Engineer – Cloud & Storage </title>
+    <title>Eduard Bodreev - Storage Systems Engineer</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -16,7 +16,7 @@
     <div class="header-classic cv-section">
       <div class="col-md-9-custom">
           <h1>Eduard Bodreev</h1>
-          <h2>DevOps Intern</h2>
+          <h2>Storage Systems Engineer</h2>
       </div>
       <div class="col-md-4-custom right">
         <div class="social-box">
@@ -33,8 +33,32 @@
       </div>
     </div>
   </div>
-  
-  <div id="content">
+
+<div class="content cv-section">
+  <div class="col-md-3">
+    <h2>Опыт работы</h2>
+  </div>
+  <div class="col-md-9">
+    <div class="cv-item">
+      <h3>Главный специалист (ранее Ведущий специалист)</h3>
+      <h4>Дирекция программных платформ / Сибинтек-Софт, Полный день, Ноябрь 2024 – настоящее время</h4>
+      <br />
+      <p>Поддержка и развитие отказоустойчивых систем хранения данных на базе Kubernetes-платформы.</p>
+      <ul>
+        <li>На протяжении 3 месяцев являюсь единственным ответственным за стабильную работу систем хранения данных (Ceph, MinIO, NFS + TopoLVM) в 12 Kubernetes-кластерах (около 140 узлов)</li>
+        <li>Сократил количество инцидентов, связанных с Ceph и TopoLVM: с 3–4 в неделю до 1–2 в месяц за счёт восстановления более 20 OSD, устранения ошибок в конфигурации и работы с отказавшими узлами</li>
+        <li>Конфигурировал и сопровождал StorageClass, ObjectBucketClaim, lifecycle-политики хранения, квоты и политики резервного копирования для Ceph и MinIO</li>
+        <li>Настроил систему резервного копирования на базе Velero: создание backup-репозиториев, автоматизация политик РК и полное восстановление проектов, включая PVC и все связанные Kubernetes-ресурсы</li>
+        <li>Дополнял и сопровождал инфраструктуру Terraform для MinIO: добавление новых S3-бакетов, пользователей, ролей и политик доступа</li>
+        <li>Участвовал в обновлении Kubernetes-платформы Alauda, а также в обновлении ОС Astra Linux и ядра Linux</li>
+        <li>Настроил RAID-массивы и iSCSI-инфраструктуру: создание LUN, настройка ACL и доступов на уровне серверов</li>
+      </ul>
+      <p><b>Технологии:</b> Ceph (CephFS, RADOS Gateway), MinIO, TopoLVM, Velero, Kubernetes (Alauda), Grafana, Prometheus, Terraform, Ansible, PostgreSQL, ClickHouse, Kafka</p>
+    </div>
+  </div>
+    <div class="cv-item"></div>
+</div>
+
     <div class="content cv-section">
       <div class="col-md-3">
         <h2>Образование</h2>
@@ -114,54 +138,65 @@
       </div>
     </div>
 
-    <div class="content cv-section">
-      <div class="col-md-3">
-        <h2>Навыки</h2>
+<div class="content cv-section">
+  <div class="col-md-3">
+    <h2>Навыки</h2>
+  </div>
+  <div class="col-md-9">
+    <div class="container text-left col-xs-12">
+
+      <div class="row">
+        <div class="col-xs-3"><li>Ceph</li></div>
+        <div class="col-xs-3"><li>Kubernetes</li></div>
+        <div class="col-xs-3"><li>Terraform</li></div>
+        <div class="col-xs-3"><li>Сети и протоколы</li></div>
       </div>
-      <div class="col-md-9">
-        <div class="container text-left col-xs-12">
-          <div class="row">
-            <div class="col-xs-3">
-              <li>Linux</li>
-            </div>
-            <div class="col-xs-3">
-              <li>Docker</li>
-            </div>
-            <div class="col-xs-3">
-              <li>Kubernetes</li>
-            </div>
-            <div class="col-xs-3">
-              <li>PostgreSQL</li>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-3">
-              <li>CI/CD</li>
-            </div>
-            <div class="col-xs-3">
-              <li>Git</li>
-            </div>
-            <div class="col-xs-3">
-              <li>Скриптовые языки (Bash, Python)</li>
-            </div>
-            <div class="col-xs-3">
-              <li>Сети и протоколы (TCP/IP, HTTP, DNS)</li>
-            </div>
-          </div>
-        </div>
+      <div class="row">
+        <div class="col-xs-3"><li>MinIO</li></div>
+        <div class="col-xs-3"><li>KubeVirt</li></div>
+        <div class="col-xs-3"><li>Ansible</li></div>
+        <div class="col-xs-3"><li>Kafka</li></div>
       </div>
+      <div class="row">
+        <div class="col-xs-3"><li>TopoLVM</li></div>
+        <div class="col-xs-3"><li>Helm</li></div>
+        <div class="col-xs-3"><li>Git / GitLab CI</li></div>
+        <div class="col-xs-3"><li>PostgreSQL</li></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3"><li>NFS</li></div>
+        <div class="col-xs-3"><li>Docker</li></div>
+        <div class="col-xs-3"><li>ArgoCD</li></div>
+        <div class="col-xs-3"><li>Redis</li></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3"><li>Dorado</li></div>
+        <div class="col-xs-3"><li>Linux</li></div>
+        <div class="col-xs-3"><li>Prometheus / Grafana</li></div>
+        <div class="col-xs-3"><li>ClickHouse</li></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3"><li>Velero</li></div>
+        <div class="col-xs-3"><li>Скриптовые языки</li></div>
+        <div class="col-xs-3"><li>ElasticSearch</li></div>
+        <div class="col-xs-3"><li>Nginx</li></div>
+      </div>
+
     </div>
+  </div>
+</div>
+
 
     <div class="content cv-section">
       <div class="col-md-3">
         <h2>О себе</h2>
       </div>
       <div class="col-md-9">
-        <p>Я всегда стремлюсь к профессиональному развитию и совершенствованию своих навыков. Мне нравится находить оптимальные решения сложных задач, исследовать новые технологии и применять их на практике. Особое внимание уделяю разработке на Go, так как вижу в этом языке большие перспективы для создания высокопроизводительных и масштабируемых систем.
+        <p>Я инженер, специализирующийся на высоконадежных системах хранения данных, контейнерной оркестрации и автоматизации инфраструктуры. Основной фокус моей работы - обеспечение устойчивости и масштабируемости Kubernetes-кластеров, настройка и поддержание работы Ceph, MinIO, TopoLVM и NFS-хранилищ.
+        На практике применяю DevOps-подходы, использую Helm, Terraform, Ansible и другие инструменты для автоматизации и поддержки отказоустойчивых решений. Интересуюсь глубокой архитектурой хранилищ, сетевыми технологиями и развитием cloud-native-инфраструктуры.
+        Продолжаю совершенствовать навыки в Go и системном программировании, развиваюсь в направлении SRE и инфраструктурной инженерии.
 
-Меня также интересуют DevOps-практики, особенно процессы автоматизации, оркестрации контейнеров и CI/CD. Недавнее поступление в магистратуру ИТМО помогает мне глубже понять эти процессы и работать с новыми инструментами.
-
-В свободное время решаю задачи на LeetCode, чтобы улучшить алгоритмическое мышление, и изучаю новые подходы в разработке и управлении инфраструктурой. Я верю, что практическое применение полученных знаний — это лучший способ стать настоящим экспертом в своей области. Моя цель — внести вклад в развитие высоконадежных систем и продолжать учиться у экспертов в этой области.</p>
+Моя цель - разрабатывать устойчивые и масштабируемые решения, постоянно совершенствуя свои технические и инженерные навыки.</p>
       </div>
     </div>
   </div>
