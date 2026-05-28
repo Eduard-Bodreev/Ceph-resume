@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduard Bodreev - Storage & Systems Engineer</title>
+    <title>Eduard Bodreev - Ceph / Storage Engineer</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -16,7 +16,7 @@
     <div class="header-classic cv-section">
       <div class="col-md-9-custom">
           <h1>Eduard Bodreev</h1>
-          <h2>Storage & Systems Engineer</h2>
+          <h2>Ceph / Storage Engineer</h2>
       </div>
       <div class="col-md-4-custom right">
         <div class="social-box">
@@ -27,7 +27,7 @@
           <p>
             Email: <a href="mailto:edik-bodreev@mail.ru">edik-bodreev@mail.ru</a><br />
             Телефон: <a href="tel:+79267623063">+7 (926) 762-30-63</a><br />
-            Сайт: <a href="http://resume-eduard-bodreev.ru/">resume-eduard-bodreev.ru</a>
+            Сайт: <a href="https://eduard-bodreev.github.io/Ceph-resume/">eduard-bodreev.github.io/Ceph-resume</a>
           </p>
         </div>
       </div>
@@ -36,27 +36,50 @@
 
 <div class="content cv-section">
   <div class="col-md-3">
+    <h2>Профиль</h2>
+  </div>
+  <div class="col-md-9">
+    <p>Инженер по системам хранения данных с основным фокусом на <b>Ceph</b>, эксплуатации production-кластеров и автоматизации инфраструктуры. Работал с <b>Ceph RBD</b> и <b>Ceph S3</b>, участвовал в стабилизации крупных storage-контуров, автоматизации развертывания и сопровождения кластеров, а также в проекте перехода с <b>replication x3</b> на <b>Erasure Coding 8+4</b> для повышения эффективности использования емкости.</p>
+  </div>
+</div>
+
+<div class="content cv-section">
+  <div class="col-md-3">
     <h2>Опыт работы</h2>
   </div>
   <div class="col-md-9">
     <div class="cv-item">
+      <h3>Инженер отдела перспективного развития</h3>
+      <h4>НОРСИ-ТРАНС, Полный день, Август 2025 - настоящее время</h4>
+      <br />
+      <p>Эксплуатация и развитие крупных Ceph-кластеров под критичной 24/7-нагрузкой.</p>
+      <ul>
+        <li>Эксплуатирую и развиваю около 20 Ceph-кластеров, используемых для непрерывной обработки и хранения данных</li>
+        <li>Работал с Ceph-кластерами масштаба до 580 OSD и 7.7 PB RAW на кластер</li>
+        <li>Участвовал в восстановлении и стабилизации кластеров после аппаратных проблем, включая инциденты, связанные с температурой, backplane и отказами оборудования в удаленном ЦОД</li>
+        <li>Координировал удаленные работы с дежурными инженерами ЦОД при диагностике и восстановлении storage-нод</li>
+        <li>Автоматизировал эксплуатационные задачи Ceph: разрабатывал служебные скрипты и systemd-юниты для повышения стабильности и наблюдаемости кластеров</li>
+        <li>Организовал поставку эксплуатационных изменений через CI/CD: сборка deb-пакетов, публикация в Nexus и раскатка на кластеры через Ansible</li>
+        <li>Участвовал в проекте перехода с replication x3 на Erasure Coding 8+4 для RBD-кластеров: выполнял расчеты эффективности, участвовал в выборе целевой схемы и проработке параметров нового контура</li>
+        <li>Участвовал в автоматизации развертывания нового Ceph-контура: bootstrap кластера, подготовка нод, создание OSD, настройка migrator-контура и миграция RBD-данных</li>
+      </ul>
+      <p><b>Технологии:</b> Ceph (RBD, BlueStore, Erasure Coding), Linux, Ansible, CI/CD, Nexus, systemd, RBD migration, networking, troubleshooting</p>
+    </div>
+    <div class="cv-item">
       <h3>Главный специалист (ранее Ведущий специалист)</h3>
-      <h4>Дирекция программных платформ / Сибинтек-Софт, Полный день, Ноябрь 2024 – настоящее время</h4>
+      <h4>Дирекция программных платформ / Сибинтек-Софт, Полный день, Ноябрь 2024 - Август 2025</h4>
       <br />
       <p>Поддержка и развитие отказоустойчивых систем хранения данных на базе Kubernetes-платформы.</p>
       <ul>
-        <li>На протяжении 3 месяцев являюсь единственным ответственным за стабильную работу систем хранения данных (Ceph, MinIO, NFS + TopoLVM) в 12 Kubernetes-кластерах (около 140 узлов)</li>
-        <li>Сократил количество инцидентов, связанных с Ceph и TopoLVM: с 3–4 в неделю до 1–2 в месяц за счёт восстановления более 20 OSD, устранения ошибок в конфигурации и работы с отказавшими узлами</li>
-        <li>Конфигурировал и сопровождал StorageClass, ObjectBucketClaim, lifecycle-политики хранения, квоты и политики резервного копирования для Ceph и MinIO</li>
-        <li>Настроил систему резервного копирования на базе Velero: создание backup-репозиториев, автоматизация политик РК и полное восстановление проектов, включая PVC и все связанные Kubernetes-ресурсы</li>
-        <li>Дополнял и сопровождал инфраструктуру Terraform для MinIO: добавление новых S3-бакетов, пользователей, ролей и политик доступа</li>
-        <li>Участвовал в обновлении Kubernetes-платформы Alauda, а также в обновлении ОС Astra Linux и ядра Linux</li>
-        <li>Настроил RAID-массивы и iSCSI-инфраструктуру: создание LUN, настройка ACL и доступов на уровне серверов</li>
+        <li>Поддерживал и развивал системы хранения данных в Kubernetes-платформе: Ceph, MinIO, NFS и TopoLVM</li>
+        <li>Отвечал за стабильную работу storage-сервисов в 12 Kubernetes-кластерах, около 140 узлов</li>
+        <li>Сократил количество инцидентов, связанных с Ceph и TopoLVM, за счет восстановления OSD, исправления конфигурационных ошибок и работы с отказавшими узлами</li>
+        <li>Настроил backup/recovery на базе Velero, включая backup-репозитории, политики резервного копирования и полное восстановление проектов с PVC и связанными Kubernetes-ресурсами</li>
+        <li>Сопровождал инфраструктуру Terraform для MinIO: бакеты, пользователи, роли и политики доступа</li>
       </ul>
       <p><b>Технологии:</b> Ceph (CephFS, RADOS Gateway), MinIO, TopoLVM, Velero, Kubernetes (Alauda), Grafana, Prometheus, Terraform, Ansible, PostgreSQL, ClickHouse, Kafka</p>
     </div>
   </div>
-    <div class="cv-item"></div>
 </div>
 
     <div class="content cv-section">
@@ -67,9 +90,10 @@
         <div class="cv-item">
           <h3>Магистратура: DevOps-инженер облачных сервисов (11.04.02)</h3>
           <h4>ITMO University, 2024 - 2026</h4>
+          <p><b>Тема ВКР:</b> Оптимизация Ceph-кластеров облачной инфраструктуры при переходе от репликации к Erasure Coding</p>
         </div>
         <div class="cv-item">
-          <h3>Бакалавриат: Информатика и вычислительная техника (09.03.01)</h4>
+          <h3>Бакалавриат: Информатика и вычислительная техника (09.03.01)</h3>
           <h4>National Research Nuclear University MEPhI, 2020 - 2024</h4>
         </div>
         <div class="cv-item">
@@ -77,52 +101,6 @@
           <h4>Курс по Kubernetes и Helm, 2024</h4>
           <h4>Курс "Разработка микросервисных приложений на Golang" от компании Yadro, 2024</h4>
         </div>
-      </div>
-    </div>
-
-    <div class="content cv-section">
-      <div class="col-md-3">
-        <h2>Проекты</h2>
-      </div>
-      <div class="col-md-9">
-        <div class="cv-item">
-          <h3>PlacePulse: Веб-сервис для отзывов на заведения</h3>
-          <h4>Самостоятельный проект, Февраль 2024 - Май 2024</h4>
-          <br />
-          <ul>
-            <li>Разработка пользовательского интерфейса, работа с компонентами, обработка событий, взаимодействие с API, управление состоянием приложения.</li>
-            <li>Создание REST API для обработки данных отзывов, настройка роутинга, работа с моделями, сериализаторами и формами, управление авторизацией и аутентификацией пользователей.</li>
-            <li>Проектирование схемы базы данных, работа с запросами SQL, настройка соединения с базой данных и интеграция с Django ORM.</li>
-          </ul>
-          <p><b>Технологии:</b> Python, JavaScript, SQLite, REST API</p>
-        </div>
-
-        <div class="cv-item">
-          <h3>Yadro: Оптимизация производительности и поисковая система на Go</h3>
-          <h4>Проект с курса компании Yadro, Июнь 2024 - Июль 2024</h4>
-          <br />
-          <ul>
-            <li>Реализовал нормализацию поисковых запросов и стемминг для улучшения результатов поиска.</li>
-            <li>Создал и протестировал REST API для взаимодействия с веб-сервисом.</li>
-            <li>Оптимизировал производительность приложения на Go, используя многопоточность, конкурентный доступ и кэширование.</li>
-            <li>Внедрил индексацию, поиск и ранжирование для ускорения обработки запросов.</li>
-            <li>Получил базовые знания работы с SQL: схемы и миграции базы данных.</li>
-          </ul>
-          <p><b>Технологии:</b> Go, REST API, SQL</p>
-        </div>
-
-        <div class="cv-item">
-          <h3>DeliveryCar: Сервис для каршеринга</h3>
-          <h4>Самостоятельный проект, Март 2024 - Апрель 2024</h4>
-          <br />
-          <ul>
-            <li>Разработал в команде сервис в виде Telegram-бота, который упрощает использование каршерингов для клиентов.</li>
-            <li>Реализовали командой функционал, позволяющий одному клиенту оставить автомобиль в нужной зоне для другого клиента, за что он получает финансовое вознаграждение.</li>
-            <li>Использовал SQLite для хранения информации о клиентах и заказах, а также управления состоянием сессий в боте.</li>
-          </ul>
-          <p><b>Технологии:</b> SQLite, Telegram API, Python</p>
-        </div>
-
       </div>
     </div>
 
@@ -135,39 +113,33 @@
 
       <div class="row">
         <div class="col-xs-3"><li>Ceph</li></div>
+        <div class="col-xs-3"><li>Ceph RBD</li></div>
+        <div class="col-xs-3"><li>Ceph S3 / RGW</li></div>
+        <div class="col-xs-3"><li>Erasure Coding</li></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3"><li>Linux</li></div>
+        <div class="col-xs-3"><li>Ansible</li></div>
+        <div class="col-xs-3"><li>CI/CD</li></div>
+        <div class="col-xs-3"><li>Nexus</li></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3"><li>Backup / Restore</li></div>
         <div class="col-xs-3"><li>Kubernetes</li></div>
+        <div class="col-xs-3"><li>MinIO</li></div>
+        <div class="col-xs-3"><li>NFS</li></div>
+      </div>
+      <div class="row">
         <div class="col-xs-3"><li>Terraform</li></div>
+        <div class="col-xs-3"><li>Prometheus / Grafana</li></div>
+        <div class="col-xs-3"><li>Troubleshooting</li></div>
         <div class="col-xs-3"><li>Сети и протоколы</li></div>
       </div>
       <div class="row">
-        <div class="col-xs-3"><li>MinIO</li></div>
-        <div class="col-xs-3"><li>KubeVirt / Kube-OVN</li></div>
-        <div class="col-xs-3"><li>Ansible</li></div>
-        <div class="col-xs-3"><li>Kafka</li></div>
-      </div>
-      <div class="row">
-        <div class="col-xs-3"><li>TopoLVM</li></div>
-        <div class="col-xs-3"><li>Helm</li></div>
-        <div class="col-xs-3"><li>Git / GitLab CI</li></div>
-        <div class="col-xs-3"><li>PostgreSQL</li></div>
-      </div>
-      <div class="row">
-        <div class="col-xs-3"><li>NFS</li></div>
-        <div class="col-xs-3"><li>Docker</li></div>
-        <div class="col-xs-3"><li>ArgoCD</li></div>
-        <div class="col-xs-3"><li>Redis</li></div>
-      </div>
-      <div class="row">
-        <div class="col-xs-3"><li>Dorado</li></div>
-        <div class="col-xs-3"><li>Linux</li></div>
-        <div class="col-xs-3"><li>Prometheus / Grafana</li></div>
-        <div class="col-xs-3"><li>VMware / vSphere</li></div>
-      </div>
-      <div class="row">
         <div class="col-xs-3"><li>Velero</li></div>
-        <div class="col-xs-3"><li>Скриптовые языки</li></div>
-        <div class="col-xs-3"><li>ElasticSearch</li></div>
-        <div class="col-xs-3"><li>Nginx</li></div>
+        <div class="col-xs-3"><li>TopoLVM</li></div>
+        <div class="col-xs-3"><li>systemd</li></div>
+        <div class="col-xs-3"><li>Capacity Planning</li></div>
       </div>
 
     </div>
@@ -180,11 +152,7 @@
         <h2>О себе</h2>
       </div>
       <div class="col-md-9">
-        <p>Я инженер, специализирующийся на высоконадежных системах хранения данных, контейнерной оркестрации и автоматизации инфраструктуры. Основной фокус моей работы - обеспечение устойчивости и масштабируемости Kubernetes-кластеров, настройка и поддержание работы Ceph, MinIO, TopoLVM и NFS-хранилищ.
-        На практике применяю DevOps-подходы, использую Helm, Terraform, Ansible и другие инструменты для автоматизации и поддержки отказоустойчивых решений. Интересуюсь глубокой архитектурой хранилищ, сетевыми технологиями и развитием cloud-native-инфраструктуры.
-        Продолжаю совершенствовать навыки в Go и системном программировании, развиваюсь в направлении SRE и инфраструктурной инженерии.
-
-Моя цель - разрабатывать устойчивые и масштабируемые решения, постоянно совершенствуя свои технические и инженерные навыки.</p>
+        <p>Специализируюсь на надежных системах хранения данных, Linux-инфраструктуре и автоматизации эксплуатации. На практике совмещаю профиль Ceph-инженера с DevOps-подходом: использую Ansible, CI/CD, Terraform, мониторинг и эксплуатационные инструменты для поддержки и развития production-сред. Профессиональный интерес сосредоточен вокруг архитектуры распределенных хранилищ, эффективности использования емкости, отказоустойчивости и практик миграции данных без простоя.</p>
       </div>
     </div>
   </div>
